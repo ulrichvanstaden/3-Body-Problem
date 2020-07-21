@@ -23,7 +23,7 @@ m2 = 1 #0.907  # Alpha Centauri B
 m3 = 1 #1.0 # Third Star
 
 
-    # Define initial position vectors
+# Define initial position vectors
 r1 = [-0.5, 0, 0]  # m
 r2 = [0.5, 0, 0]  # m
 r3 = [0, 1, 0] # m
@@ -32,10 +32,10 @@ r1 = np.array(r1, dtype="float64")
 r2 = np.array(r2, dtype="float64")
 r3 = np.array(r3, dtype="float64")
 
-    # Find Centre of Mass
+# Find Centre of Mass
 r_com=(m1*r1+m2*r2+m3*r3)/(m1+m2+m3)
 
-    # Define initial velocities
+# Define initial velocities
 v1 = [0.01, 0.01, 0]  # m/s
 v2 = [-0.05, 0, -0.1]  # m/s
 v3 = [0, -0.01, 0] # m/s
@@ -43,7 +43,7 @@ v3 = [0, -0.01, 0] # m/s
 v1 = np.array(v1, dtype="float64")
 v2 = np.array(v2, dtype="float64")
 v3 = np.array(v3, dtype="float64")
-    # Find velocity of COM
+# Find velocity of COM
 v_com=(m1*v1+m2*v2+m3*v3)/(m1+m2+m3)
 
 #def calculate(devr1, devr2, devr3, w, t, G, m1, m2, m3):
@@ -105,14 +105,7 @@ def lyaponov(devr1_sol, r1_sol, time_span):
         i+=1
     return results
 
-#print(devr1_sol[36])
 #print(results)
-
-#diff = np.absolute(np.divide(devr1_sol,r1_sol))
-#lyaponov = np.log(diff)
-
-#diff = np.dot(devr1_sol, r1_sol)
-#logdiff = np.log(np.e, diff)
 
 
 #Create figure
@@ -135,12 +128,8 @@ ax2d=fig.add_subplot(111)
 #ax.set_title("Visualization of orbits of stars in a two-body system\n",fontsize=14)
 #ax.legend(loc="upper left",fontsize=14)
 
-#axly=fig.add_subplot(111)
-#axly.scatter(np.linspace(0,2,200),r1_sol[-1,0])
 #plt.show()
 
 ax2d.plot(time_span,results)
 plt.show()
 
-#print(r1_sol)
-#ax.scatter(r1_sol)
