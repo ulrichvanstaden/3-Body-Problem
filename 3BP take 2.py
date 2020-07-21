@@ -106,7 +106,7 @@ def lyaponov(devr1_sol, r1_sol, time_span):
     return results
 
 #print(devr1_sol[36])
-print(results)
+#print(results)
 
 #diff = np.absolute(np.divide(devr1_sol,r1_sol))
 #lyaponov = np.log(diff)
