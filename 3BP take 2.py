@@ -86,11 +86,11 @@ import scipy.integrate
 in_three_body_sol = sci.integrate.odeint(ThreeBodyEquations,initial(0,0,0),time_span,args=(G,m1,m2,m3))
 dev_three_body_sol = sci.integrate.odeint(ThreeBodyEquations,initial([delta_r,0,0] ,0,0),time_span,args=(G,m1,m2,m3))
 
-
+#sloutions for the initial positions 
 r1_sol = in_three_body_sol[:,:3]
 r2_sol = in_three_body_sol[:,3:6]
 r3_sol = in_three_body_sol[:,6:9]
-
+#solutions with small deviation(dev) from initial conditions 
 devr1_sol = dev_three_body_sol[:,:3]
 devr2_sol = dev_three_body_sol[:,3:6]
 devr3_sol = dev_three_body_sol[:,6:9]
