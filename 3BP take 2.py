@@ -105,7 +105,8 @@ def lyaponov(devr1_sol, r1_sol, time_span):
         i+=1
     return results
 
-#print(results)
+lyaponov(devr1_sol, r1_sol, time_span)
+print(results)
 
 
 #Create figure
